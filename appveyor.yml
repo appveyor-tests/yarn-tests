@@ -1,6 +1,6 @@
 test_script:
 - ps: $ErrorActionPreference = "Stop"
-- ps: $expected_yarn_version = '0.21.3'
+- ps: $expected_yarn_version = '0.24.6'
 - ps: $actual_yarn_version = (yarn --version)
 - ps: 'if($actual_yarn_version -ne $expected_yarn_version) { throw "Yarn version: $actual_yarn_version, expected: $expected_yarn_version"; }'
 
