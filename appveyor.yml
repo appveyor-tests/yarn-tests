@@ -1,7 +1,8 @@
 test_script:
 - ps: $ErrorActionPreference = "Stop"
-- ps: $expected_yarn_version = '1.3.2'
+- ps: $expected_yarn_version = '1.5.1'
 - ps: $actual_yarn_version = (yarn --version)
 - ps: 'if($actual_yarn_version -ne $expected_yarn_version) { throw "Yarn version: $actual_yarn_version, expected: $expected_yarn_version"; }'
+- yarn add lodash
 
 build: off
